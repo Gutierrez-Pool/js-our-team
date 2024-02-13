@@ -52,14 +52,30 @@ const ourTeam = [
 ]
 
 
+
+// MILESTONE 2
+const listaTeam = document.querySelector("ul");
+
+
+
 // MILESTONE 1
 for (let i = 0; i < ourTeam.length; i++) {
 
     const team = ourTeam[i];
 
+    let listaDOM = "";
+
     for (let key in team) {
 
-        console.log(`${key}: ${team[key]}`)
+        // console.log(`${key}: ${team[key]}`)
+
+        listaDOM += `${team[key]}`;
 
     }
+
+    listaTeam.innerHTML += `<div>${listaDOM}</div>`
+
 }
+
+
+
